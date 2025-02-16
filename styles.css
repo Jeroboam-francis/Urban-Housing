@@ -18,7 +18,7 @@
 }
 
 body {
-  font-family: 'Times New Roman', Times, serif;
+  font-family: 'Inter', 'Helvetica Neue', sans-serif;
   line-height: 1.6;
   color: var(--text-color);
 }
@@ -28,6 +28,8 @@ header {
   background: linear-gradient(var(--overlay-color), var(--overlay-color)), url('src/images/background.jpg');
   background-size: cover;
   background-position: center;
+  background-attachment: fixed;
+  will-change: transform;
   color: var(--text-color-light);
   text-align: center;
   padding: 11rem 1rem;
@@ -69,6 +71,11 @@ nav a {
 
 nav a:hover {
   color: var(--secondary-color);
+}
+
+nav a:focus {
+  outline: 2px solid var(--accent-color);
+  outline-offset: 2px;
 }
 
 /* Sections */
@@ -145,9 +152,19 @@ h2 {
 .gallery figcaption {
   text-align: center;
   padding: 1rem;
-  background-color: #f5f5f5;
+  background-color: var(--primary-color);
+  color: var(--text-color-light);
   font-size: 1.2rem;
   font-weight: 500;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: rgba(48, 107, 48, 0.9);
+  transition: opacity 0.3s ease;
+}
+
+.gallery figure:hover figcaption {
+  opacity: 1;
 }
 
 /* Amenities */
@@ -254,6 +271,8 @@ footer {
   background: linear-gradient(var(--overlay-color), var(--overlay-color)), url('src/images/parking-lot.jpg');
   background-size: cover;
   background-position: center;
+  background-attachment: fixed;
+  will-change: transform;
   color: var(--text-color-light);
   padding: 7rem 2rem;
   text-align: center;
