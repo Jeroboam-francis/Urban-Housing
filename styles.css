@@ -1,0 +1,355 @@
+/* Root colors */
+:root {
+  --primary-color: #306b30;
+  --secondary-color: #284e2f;
+  --accent-color: #628627;
+  --background-color: #f9f9f9;
+  --text-color: #333;
+  --text-color-light: rgb(201, 223, 197);
+  --shadow-color: rgba(0, 0, 0, 0.1);
+  --overlay-color: rgba(0, 0, 0, 0.6);
+}
+
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Times New Roman', Times, serif;
+  line-height: 1.6;
+  color: var(--text-color);
+}
+
+/* Header */
+header {
+  background: linear-gradient(var(--overlay-color), var(--overlay-color)), url('src/images/background.jpg');
+  background-size: cover;
+  background-position: center;
+  color: var(--text-color-light);
+  text-align: center;
+  padding: 11rem 1rem;
+}
+
+.header-content h1 {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+
+.header-content h2 {
+  font-size: 2.5rem;
+  font-style: italic;
+  color: var(--text-color-light);
+}
+
+/* Navigation */
+nav {
+  background-color: var(--primary-color);
+  padding: 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+nav a {
+  color: var(--text-color-light);
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: var(--secondary-color);
+}
+
+/* Sections */
+section {
+  padding: 4rem 2rem;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 3rem;
+  color: var(--primary-color);
+  font-weight: bolder;
+  font-size: 4rem;
+}
+
+/* Apartments */
+.apartment {
+  max-width: 1280px;
+  margin: 0 auto 4rem;
+  padding: 2rem;
+  background-color: var(--background-color);
+  border-radius: 8px;
+  box-shadow: 0 2px 4px var(--shadow-color);
+}
+
+.apartment h3 {
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+}
+
+.price-tag {
+  background-color: var(--accent-color);
+  color: var(--text-color-light);
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 1rem 0;
+  display: inline-block;
+}
+
+/* Gallery */
+.gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 2rem;
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.gallery figure {
+  width: 100%;
+  height: 500px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px var(--shadow-color);
+}
+
+.gallery img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+
+.gallery img:hover {
+  transform: scale(1.02);
+}
+
+.gallery figcaption {
+  text-align: center;
+  padding: 1rem;
+  background-color: #f5f5f5;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+/* Amenities */
+.amenities-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.amenity-card {
+  background-color: var(--text-color-light);
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px var(--shadow-color);
+  transition: transform 0.3s;
+  text-align: center;
+}
+
+.amenity-card:hover {
+  transform: translateY(-5px);
+}
+
+.amenity-card i {
+  font-size: 5rem;
+  color: var(--accent-color);
+  margin-bottom: 1rem;
+  transition: color 0.3s ease;
+}
+
+.amenity-card:hover i {
+  color: var(--primary-color);
+}
+
+/* Contact */
+.contact-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+}
+
+.contact-info {
+  padding: 2rem;
+}
+
+.social-links {
+  margin-top: 1.5rem;
+}
+
+.social-links a {
+  margin-right: 1rem;
+  color: var(--secondary-color);
+  text-decoration: none;
+}
+
+.contact-form {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  margin-bottom: 0.5rem;
+}
+
+.form-group input,
+.form-group textarea {
+  padding: 0.8rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+button {
+  background-color: var(--secondary-color);
+  color: var(--text-color-light);
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #2980b9;
+}
+
+/* Footer */
+footer {
+  background-color: var(--primary-color);
+  color: var(--text-color-light);
+  text-align: center;
+  padding: 2rem;
+}
+
+/* About section */
+.about-section {
+  background: linear-gradient(var(--overlay-color), var(--overlay-color)), url('src/images/parking-lot.jpg');
+  background-size: cover;
+  background-position: center;
+  color: var(--text-color-light);
+  padding: 7rem 2rem;
+  text-align: center;
+}
+
+.about-section h2 {
+  color: var(--text-color-light);
+  margin-bottom: 2rem;
+}
+
+.about-section p {
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+/* Responsive design */
+@media screen and (max-width: 1280px) {
+  .gallery img {
+    height: 500px;
+  }
+
+  .apartment {
+    margin: 0 1rem 4rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .header-content h1 {
+    font-size: 2rem;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .contact-container {
+    grid-template-columns: 1fr;
+  }
+
+  section {
+    padding: 2rem 1rem;
+  }
+
+  .gallery img {
+    height: 350px;
+  }
+
+  .amenities-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-section {
+    padding: 2rem 1rem;
+  }
+
+  .about-section h2 {
+    font-size: 2rem;
+  }
+
+  .about-section p {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .header-content h1 {
+    font-size: 1.5rem;
+  }
+
+  .apartment {
+    padding: 1rem;
+  }
+
+  .gallery img {
+    height: 250px;
+  }
+
+  .gallery figcaption {
+    font-size: 1rem;
+    padding: 0.75rem;
+  }
+
+  .contact-info,
+  .contact-form {
+    padding: 1rem;
+  }
+
+  .about-section h2 {
+    font-size: 1.5rem;
+  }
+
+  .about-section p {
+    font-size: 0.9rem;
+  }
+}
